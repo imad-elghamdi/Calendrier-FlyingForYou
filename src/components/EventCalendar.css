@@ -1,0 +1,35 @@
+/* EventCalendar.css */
+.event-calendar {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 20px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.event-calendar h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.event {
+  border-bottom: 1px solid #ccc;
+  padding: 10px 0;
+}
+
+.event-date {
+  font-weight: bold;
+}
+
+.event-description {
+  margin-left: 10px;
+}
+
+.event-time {
+  color: #777;
+  font-size: 12px;
+}
+
+/* Ajoutez d'autres styles selon vos besoins *//*# sourceMappingURL=EventCalendar.css.map */

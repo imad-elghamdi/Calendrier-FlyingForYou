@@ -1,0 +1,264 @@
+@charset "UTF-8";
+.App {
+  text-align: center;
+}
+
+.calendar-container {
+  height: 500px;
+  margin: 0 auto;
+}
+
+.rbc-calendar {
+  font-family: Arial, sans-serif;
+  width: 100%;
+  height: 90%;
+  background-color: #fff;
+  padding: 20px;
+}
+
+.rbc-day-slot .rbc-time-slot {
+  border-top: none;
+}
+
+.rbc-time-slot {
+  flex: none;
+}
+
+.rbc-event {
+  background-color: #3174ad;
+  color: #fff;
+  border: 1px solid #18568f;
+  border-radius: 4px;
+  padding: 2px 4px;
+  margin-top: 2px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.rbc-selected-cell {
+  background-color: #eaf6ff;
+}
+
+.rbc-today {
+  background-color: #f7f7f7;
+}
+
+.rbc-off-range {
+  color: #ccc;
+}
+
+.rbc-show-more {
+  background-color: #eee;
+  color: #333;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 4px;
+  padding: 2px;
+  margin-top: 4px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.rbc-show-more:hover {
+  background-color: #ddd;
+}
+
+.rbc-time-slot {
+  flex: none;
+}
+
+.rbc-show-more-link {
+  color: #3174ad;
+  cursor: pointer;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.rbc-row {
+  box-sizing: border-box;
+  min-height: 20px;
+}
+
+.add-button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: #007bff;
+  background-color: #007bff;
+  color: #fff;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  margin-right: 1rem;
+  margin-top: 1rem;
+}
+
+.form-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  width: 500px;
+  z-index: 999;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  /* Couleur d'arrière-plan sombre */
+  z-index: 998;
+  /* Pour placer l'arrière-plan sombre sous le formulaire */
+}
+
+.form-title {
+  font-family: "Montserrat";
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: grey;
+  text-align: start;
+}
+
+.form-separator {
+  margin: 20px 0;
+  border-top: 1px solid #ccc;
+}
+
+.form-row {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.form2 {
+  margin-right: 8rem;
+}
+
+.form-date-time {
+  display: flex;
+  align-items: center;
+}
+
+.form-icon {
+  font-size: 20px;
+  margin-right: 10px;
+  margin-top: -20px;
+}
+
+.form-icon1 {
+  font-size: 20px;
+  margin-left: -40px;
+  margin-top: -1rem;
+  margin-right: 14px;
+}
+
+.current-date {
+  font-size: 20px;
+  margin-top: -2.5rem;
+  margin-bottom: 1rem;
+  margin-right: 29rem;
+}
+
+.form-input {
+  /* width: 100%; */
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background: #e0ccfc;
+}
+
+.rbc-day-slot .rbc-time-slot {
+  border-top: none;
+}
+
+.form {
+  width: 100px;
+}
+
+.form-button {
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  /* border-radius: 5px; */
+  cursor: pointer;
+  margin-left: 20rem;
+  width: 140px;
+  background-color: #6200EE;
+}
+
+.form-button:hover {
+  background-color: #0056b3;
+}
+
+.right {
+  margin-right: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+  .form-row {
+    flex-direction: column; /* Réorganisez les éléments en colonne */
+  }
+  .form-date-time {
+    width: 100%;
+    max-width: 300px; /* Ajustez la largeur du composant de date/heure */
+    margin-bottom: 15px;
+  }
+  .form-date-time:last-child {
+    margin-bottom: 0; /* Supprimez la marge du dernier composant de date/heure */
+  }
+  .form-icon1 {
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 1rem;
+  }
+  .form-button {
+    margin-left: 0;
+    width: 100%; /* Utilisez toute la largeur disponible pour le bouton */
+  }
+}
+@media screen and (max-width: 768px) {
+  .calendar {
+    display: block;
+    width: 100%; /* Utilisez toute la largeur disponible */
+  }
+  .calendar-header {
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  .calendar-header span {
+    display: block;
+    margin: 0 auto;
+  }
+  table {
+    width: 100%;
+  }
+  .calendar table td {
+    width: 14.285%; /* Répartissez les jours de la semaine sur 7 colonnes */
+    box-sizing: border-box;
+    text-align: center;
+    padding: 5px;
+  }
+  .calendar table td ul {
+    padding-left: 0;
+  }
+  .calendar-right {
+    width: 100%;
+    max-width: none; /* Supprimez la largeur maximale pour la partie droite */
+  }
+  .separator {
+    display: none; /* Masquez la barre de séparation */
+  }
+}/*# sourceMappingURL=App.css.map */
